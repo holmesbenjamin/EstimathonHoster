@@ -1,0 +1,29 @@
+<!-- templates/scoreboard.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Estimathon Scoreboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <script src="https://cdn.socket.io/4.4.1/socket.io.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Estimathon Scoreboard</h1>
+        </header>
+
+        <main>
+            <div id="scoreboard">
+            </div>
+        </main>
+
+        <footer>
+            <img src="{{ url_for('static', filename='images/Jane_Street_Capital_Logo.svg.png') }}" alt="Jane Street Logo" class="logo">
+        </footer>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/scoreboard.js') }}"></script>
+</body>
+</html>

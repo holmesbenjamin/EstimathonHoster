@@ -1,0 +1,64 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Estimathon - Input</title>
+    <script src="https://cdn.socket.io/4.4.1/socket.io.min.js"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+
+    <h1>Estimathon Input Page</h1>
+
+    <form id="add-team-form">
+        <label for="team-name">Add Team:</label>
+        <input type="text" name="team_name" id="team-name" required>
+        <button type="submit">Add Team</button>
+    </form>
+
+    <form id="submit-interval-form">
+        <label for="team-id">Select Team:</label>
+        <select name="team_id" id="team-id" required>
+            <option value="">Select Team</option>
+        </select>
+
+        <label for="problem-id">Problem ID:</label>
+        <input type="number" name="problem_id" id="problem-id" required min="1">
+
+        <label for="min-value">Min Value:</label>
+        <input type="number" name="min_value" id="min-value" required min="0">
+
+        <label for="max-value">Max Value:</label>
+        <input type="number" name="max_value" id="max-value" required min="0">
+
+        <button type="submit">Submit Interval</button>
+    </form>
+
+    <h2>Team Dashboard</h2>
+    <div id="dashboard">
+    </div>
+
+    <h2>Submissions Log</h2>
+    <div>
+        <label>Sort By:</label>
+        <button onclick="sortSubmissions('team')">Sort by Team</button>
+        <button onclick="sortSubmissions('problem')">Sort by Problem</button>
+    </div>
+    <table id="submissions-log">
+        <thead>
+            <tr>
+                <th>Team ID</th>
+                <th>Problem</th>
+                <th>Min Value</th>
+                <th>Max Value</th>
+                <th>Result</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
