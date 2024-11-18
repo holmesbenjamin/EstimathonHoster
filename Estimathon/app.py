@@ -16,8 +16,19 @@ db.init_app(app)
 socketio = SocketIO(app, async_mode='eventlet')
 
 PROBLEMS = [
-    {'id': 1, 'description': 'Estimate the population of City X.', 'correct_answer': 500000},
-    {'id': 2, 'description': 'Estimate the height of Mount Y.', 'correct_answer': 8000},
+    {'id': 1, 'description': 'How many Greggs branches are open (2023)?', 'correct_answer': 2437},
+    {'id': 2, 'description': 'How long does it take for light from the Sun to reach Mars (in minutes)?', 'correct_answer': 13.39},
+    {'id': 3, 'description': 'How many million liters of Pepsi and Coca Cola were consumed in the UK in 2017?', 'correct_answer': 487.6},
+    {'id': 4, 'description': 'How much land (in hectares) does the University of Bristol own?', 'correct_answer': 329.3},
+    {'id': 5, 'description': 'How many matches did Muhammad Ali participate in?', 'correct_answer': 61},
+    {'id': 6, 'description': 'How many minutes of content are uploaded to YouTube every hour (2022)?', 'correct_answer': 300000},
+    {'id': 7, 'description': 'How many vending machines are there across the UK (2023)?', 'correct_answer': 434500},
+    {'id': 8, 'description': 'How many breaths does an average person take in a day?', 'correct_answer': 22000},
+    {'id': 9, 'description': 'How many million times does a person blink in a lifetime?', 'correct_answer': 621.5},
+    {'id': 10, 'description': 'How many bicycles are there in Amsterdam?', 'correct_answer': 881000},
+    {'id': 11, 'description': 'If 2^n < 1 billion what is the largest integer n?', 'correct_answer': 29},
+    {'id': 12, 'description': 'How many trailing zeros are in 1000!?', 'correct_answer': 249},
+    {'id': 13, 'description': 'How many days would it take for a person to walk around the Moon nonstop, assuming a speed of 5 km/h?', 'correct_answer': 91},
 ]
 
 TOTAL_PROBLEMS = 13
